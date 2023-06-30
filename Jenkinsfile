@@ -143,7 +143,7 @@ pipeline {
                         script {
                             withKubeCredentials(kubectlCredentials: [[ credentialsId: 'kubernetes', namespace: 'ms' ]]) {
                                 sh 'kubectl get ns' 
-                                sh 'kubectl create ns ms'
+                                sh 'kubectl create namespaces ms'
                                 sh 'kubectl apply -f kubernetes/yamlfile'
                             }
                         }
