@@ -142,7 +142,7 @@ pipeline {
                     'deploy on k8s': {
                         script {
                             withKubeCredentials(kubectlCredentials: [[ credentialsId: 'kubernetes', namespace: 'ms' ]]) {
-                                sh 'kubectl get ns' 
+                                 
                                 sh 'kubectl apply -f kubernetes/yamlfile'
                             }
                         }
