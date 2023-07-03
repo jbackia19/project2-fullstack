@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('SCM Checkout'){
             steps {
-            git branch: 'main', url: 'https://github.com/jbackia19/fullstackmicroservices.git'
+            git branch: 'main', url: 'https://github.com/jbackia19/project2-fullstack.git'
             sh 'ls'
             }
         }
